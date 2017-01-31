@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "728606692779",
+    "firebase_url": "https://er-123-office.firebaseio.com",
+    "project_id": "er-123-office",
+    "storage_bucket": "er-123-office.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728606692779:android:3902d38b228899f5",
+        "android_client_info": {
+          "package_name": "com.example.android.er123office"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728606692779-s190es0iq7uf3e0b3hjduoijj90dhdn3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_uP0uvHY6SCz9yQUZmx8Kbc7uF7vGgp0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
