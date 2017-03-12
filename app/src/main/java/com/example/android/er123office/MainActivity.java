@@ -2,8 +2,6 @@ package com.example.android.er123office;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.example.android.er123office.callbacks.OnDriverSent;
 import com.example.android.er123office.callbacks.OnPendingRequest;
@@ -61,46 +59,46 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(29.9556449,30.9134569),16.0f));
 
 
-        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-            @Override
-            public boolean onMarkerClick(Marker marker) {
-
-                String markerType = marker.getTitle().substring(0, 5);
-                Log.e("TAGKEY2", markerType);
-                if (markerType.equals("Plate")) {
-
-                    Toast.makeText(MainActivity.this, "Contains Plate", Toast.LENGTH_SHORT).show();
-                } else if (markerType.equals("Injur"))
-                {
-                    Toast.makeText(MainActivity.this, "Contains Injuries", Toast.LENGTH_SHORT).show();
-                    LatLng tempLatLan = marker.getPosition();
-                    patientMarker.setVisible(false);
-                    mMap.addMarker(new MarkerOptions().position(tempLatLan).icon(patient));
-
-                }
-//                LatLng markerLatLng = marker.getPosition();
-//                Double markerlat = markerLatLng.latitude;
-//                Double markerlng = markerLatLng.longitude;
-//                for(HashMap<String,String> ambulance:ambulanceMapList)
-//                {
-//                    Double ambulancelat = Double.parseDouble(ambulance.get("latPosition"));
-//                    Double ambulancelng = Double.parseDouble(ambulance.get("longPosition"));
-//                }
-
-
-//                if(markerlat.equals(ambulancelat) && markerlng.equals(ambulancelng))
-//                {
-//                    Toast.makeText(MainActivity.this,"True",Toast.LENGTH_SHORT).show();
-//                }
-//                else
-//                {
-//                    Toast.makeText(MainActivity.this,"False",Toast.LENGTH_SHORT).show();
-//                }
-
-
-                return true;
-            }
-        });
+//        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+//            @Override
+//            public boolean onMarkerClick(Marker marker) {
+//
+////                String markerType = marker.getTitle().substring(0, 5);
+////                Log.e("TAGKEY2", markerType);
+////                if (markerType.equals("Plate")) {
+////
+////                    Toast.makeText(MainActivity.this, "Contains Plate", Toast.LENGTH_SHORT).show();
+////                } else if (markerType.equals("Injur"))
+////                {
+////                    Toast.makeText(MainActivity.this, "Contains Injuries", Toast.LENGTH_SHORT).show();
+////                    LatLng tempLatLan = marker.getPosition();
+////                    patientMarker.setVisible(false);
+////                    mMap.addMarker(new MarkerOptions().position(tempLatLan).icon(patient));
+////
+////                }
+////                LatLng markerLatLng = marker.getPosition();
+////                Double markerlat = markerLatLng.latitude;
+////                Double markerlng = markerLatLng.longitude;
+////                for(HashMap<String,String> ambulance:ambulanceMapList)
+////                {
+////                    Double ambulancelat = Double.parseDouble(ambulance.get("latPosition"));
+////                    Double ambulancelng = Double.parseDouble(ambulance.get("longPosition"));
+////                }
+//
+//
+////                if(markerlat.equals(ambulancelat) && markerlng.equals(ambulancelng))
+////                {
+////                    Toast.makeText(MainActivity.this,"True",Toast.LENGTH_SHORT).show();
+////                }
+////                else
+////                {
+////                    Toast.makeText(MainActivity.this,"False",Toast.LENGTH_SHORT).show();
+////                }
+//
+//
+//                return true;
+//            }
+//        });
 
 
     }

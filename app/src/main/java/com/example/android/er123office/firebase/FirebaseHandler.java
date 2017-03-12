@@ -27,7 +27,7 @@ public class FirebaseHandler {
         mProgress.setMessage("Please Wait");
         mProgress.setCancelable(false);
         mProgress.show();
-        FirebaseHelper.getDatabase().getReference().child("PendingRequests").addValueEventListener(new ValueEventListener() {
+        FirebaseHelper.getDatabase().getReference().child("UserRequests").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
@@ -56,7 +56,7 @@ public class FirebaseHandler {
         mProgress.setMessage("Please Wait");
         mProgress.setCancelable(false);
         mProgress.show();
-        FirebaseHelper.getDatabase().getReference("allDrivers").addValueEventListener(new ValueEventListener() {
+        FirebaseHelper.getDatabase().getReference().child("allDrivers").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.e("Getting Driver Location","True");
