@@ -49,6 +49,14 @@ public class FirebaseHandler {
 
     }
 
+    public static void sentRequestsToDrivers(final ArrayList<Driver> drivers, PendingRequests target){
+        for(int i=0;i<drivers.size();i++){
+            String email=drivers.get(i).getDriverEmail().substring(0,drivers.get(i).getDriverEmail().indexOf('@'));
+            final String emailNode =email.replace(".","");
+            FirebaseHelper.getDatabase().getReference().child("Requests").child(emailNode).setValue(target);
+        }
+    }
+
     public static void getAllDrivers(final Context context, final OnDriverSent listener)
     {
         final ArrayList<Driver> arrayList = new ArrayList<>();
